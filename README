@@ -1,0 +1,102 @@
+> Pipeline ETL de Vendas
+
+# Sobre o projeto
+
+Projeto desenvolvido em Python para demonstrar um pipeline ETL completo.
+O pipeline realiza a extração de um arquivo CSV, faz o tratamento dos dados utilizando Pandas e carrega as informações para um banco PostgreSQL, registrando logs durante toda a execução.
+
+# Tecnologias
+
+- Python
+- Pandas
+- PostgreSQL
+- SQLAlchemy
+- Logging
+- Task Scheduler (Windows)
+
+# Estrutura
+
+pipeline_vendas/
+
+├── data/
+
+│ ├── raw/
+
+│ └── processed/
+
+├── logs/
+
+├── Scripts/
+
+│ ├── extract.py
+
+│ ├── transform.py
+
+│ ├── load.py
+
+│ └── main.py
+
+├── requirements.txt
+
+└── README.md
+
+# Fluxo
+
+CSV
+↓
+
+Extração
+
+↓
+
+Transformação
+
+↓
+
+PostgreSQL
+
+↓
+
+Logs
+
+# Funcionalidades
+
+- Extração de dados CSV
+- Limpeza de dados
+- Conversão de tipos
+- Remoção de duplicatas
+- Tratamento de valores ausentes
+- Carregamento para PostgreSQL
+- Registro de logs
+- Tratamento de erros
+- Execução automatizada
+
+# Como executar
+
+1. Clone o repositório
+
+2. Instale as dependências
+
+pip install -r requirements.txt
+
+3. Configure suas credenciais do PostgreSQL antes de executar
+
+4. Execute
+
+python Scripts/main.py
+
+# Exemplo do log
+
+INFO - Iniciando pipeline
+
+INFO - Extração concluída
+
+INFO - Transformação concluída
+
+INFO - Carregamento concluído
+
+INFO - Pipeline finalizada com sucesso
+
+# Autor
+
+Breno

@@ -1,0 +1,16 @@
+id_venda,data,cliente,produto,quantidade,preco_unitario,estado
+1,2026-01-03,Ana,Notebook,1,3500.0,SP
+2,2026-01-04,Carlos,Mouse,2,80.0,RJ
+3,2026-01-05,Marina,Teclado,1,150.0,MG
+4,2026-01-05,João,Monitor,1,1200.0,BA
+5,2026-01-06,Pedro,Mouse,3,80.0,SP
+6,2026-01-06,,Notebook,1,3500.0,SP
+7,2026-01-07,Julia,Headset,2,,PR
+8,2026-01-07,Lucas,Monitor,1,SC,
+8,2026-01-07,Lucas,Monitor,1,1200,SC
+9,2026-01-08,desconhecido,Teclado,2,150.0,RJ
+10,,Fernanda,Webcam,1,250.0,PE
+11,2026-01-09,Rafael,SSD,-1,450.0,CE
+12,2026-01-10,Bianca,Notebook,1,3500.0,SP
+13,2026-01-11,Gustavo,Mousepad,5,40.0,MG
+14,2026-01-12,Larissa,Cadeira Gamer,1,950.0,GO
