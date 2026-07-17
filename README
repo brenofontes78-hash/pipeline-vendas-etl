@@ -1,91 +1,112 @@
-> Pipeline ETL de Vendas
 
-# Sobre o projeto
+🡪 Pipeline ETL de Vendas
 
-Projeto desenvolvido em Python para demonstrar um pipeline ETL completo.
-O pipeline realiza a extração de um arquivo CSV, faz o tratamento dos dados utilizando Pandas e carrega as informações para um banco PostgreSQL, registrando logs durante toda a execução.
+➔ Sobre o projeto
 
-# Tecnologias
+Este projeto foi desenvolvido em Python para simular um fluxo de dados de vendas utilizando um pipeline ETL.
+
+O processo recebe dados brutos em formato CSV, realiza a limpeza e transformação das informações com Pandas e, em seguida, armazena os dados tratados em um banco PostgreSQL.
+
+Durante a execução, o pipeline registra logs das etapas realizadas, possui tratamento de erros e pode ser executado automaticamente utilizando o Windows Task Scheduler.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+➔ Tecnologias
 
 - Python
 - Pandas
 - PostgreSQL
 - SQLAlchemy
 - Logging
-- Task Scheduler (Windows)
+- Windows Task Scheduler
+- Git/GitHub
 
-# Estrutura
+➔ Arquitetura
+
+```
+
+CSV (Dados Brutos)
+|
+v
+Extract
+|
+v
+Transform (Pandas)
+|
+v
+Load (PostgreSQL)
+|
+v
+Logs
+
+```
+
+➔ Estrutura do projeto
+
+```
 
 pipeline_vendas/
 
 ├── data/
-
-│ ├── raw/
-
-│ └── processed/
+│   └── raw/
 
 ├── logs/
 
-├── Scripts/
-
-│ ├── extract.py
-
-│ ├── transform.py
-
-│ ├── load.py
-
-│ └── main.py
+├── scripts/
+│   ├── extract.py
+│   ├── transform.py
+│   ├── load.py
+│   └── main.py
 
 ├── requirements.txt
 
 └── README.md
 
-# Fluxo
+````
 
-CSV
-↓
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Extração
+➔ Funcionalidades
 
-↓
+- Leitura de dados a partir de arquivos CSV
+- Limpeza e organização dos dados
+- Conversão e padronização de tipos
+- Remoção de registros duplicados
+- Tratamento de dados ausentes
+- Envio dos dados tratados para PostgreSQL
+- Geração de logs durante a execução
+- Tratamento de possíveis erros no processo
+- Automação da execução do pipeline
 
-Transformação
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-↓
+➔ Como executar
 
-PostgreSQL
+# 1. Clone o repositório
 
-↓
+```bash
+git clone https://github.com/brenofontes78-hash/pipeline-vendas-etl.git
+````
 
-Logs
+# 2. Instale as dependências
 
-# Funcionalidades
-
-- Extração de dados CSV
-- Limpeza de dados
-- Conversão de tipos
-- Remoção de duplicatas
-- Tratamento de valores ausentes
-- Carregamento para PostgreSQL
-- Registro de logs
-- Tratamento de erros
-- Execução automatizada
-
-# Como executar
-
-1. Clone o repositório
-
-2. Instale as dependências
-
+```bash
 pip install -r requirements.txt
+```
 
-3. Configure suas credenciais do PostgreSQL antes de executar
+# 3. Configure as credenciais do PostgreSQL
 
-4. Execute
+Configure os dados de conexão com o banco antes de executar o pipeline.
 
-python Scripts/main.py
+# 4. Execute o pipeline
 
-# Exemplo do log
+```bash
+python scripts/main.py
+```
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+➔ Exemplo de execução
 
 INFO - Iniciando pipeline
 
@@ -95,8 +116,10 @@ INFO - Transformação concluída
 
 INFO - Carregamento concluído
 
-INFO - Pipeline finalizada com sucesso
+INFO - Pipeline finalizado com sucesso
 
-# Autor
+➔ Autor
 
-Breno
+🡪 Breno
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
